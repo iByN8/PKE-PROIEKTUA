@@ -39,8 +39,12 @@
         </div>
     </nav>
 
+    <div class="d-flex flex-column justify-content-center align-items-center min-vh-100">
+        <h1 style="margin-bottom: 20px;">Autoebaluazioa</h1>
+        <button id="hasiButton" onclick="mostrarIframe()" class="btn btn-primary btn-lg mx-auto">HASI</button>
+    </div>
 
-    <div class="container mt-5 d-flex justify-content-center align-items-center min-vh-100">
+    <div id="iframe-container" style="display:none;" class="justify-content-center align-items-center min-vh-100">
         <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfn01jkeavpsWO8xsNO2QuS1waGm3ClQTUiuNwh2SXL4os3IQ/viewform?embedded=true" width="640" height="480" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
 
     </div>
@@ -49,5 +53,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </body>
+
+<script>
+    function mostrarIframe() {
+        document.getElementById("hasiButton").style="display:none;";
+        document.getElementById("iframe-container").style.display = "flex";
+    }
+    </script>
 
 </html>
