@@ -2,52 +2,104 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .rounded-image {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .jumbotron{
+      background: url('http://placekitten.com/800/500') no-repeat center center;
+      background-size: cover;
+      padding-top: 10%;
+      padding-bottom: 10%;
+    }
+  </style>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">GRaL Informazioa</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Hasiera<span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Araudia</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Datak/Egutegia</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Aurreko GRaL-ak</a>
-                  </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Autoebaluazioa</a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">About Us</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-
-
-    <div class="container mt-5">
-        <h1>¡Bienvenido a mi página web!</h1>
-        <p>Esta es una simple página web usando Bootstrap.</p>
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #000000;">
+    <a class="navbar-brand" href="#">GRaL Informazioa</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Hasiera<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="araudia.html">Araudia</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="egutegi_datak.html">Datak/Egutegia</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="gralak.html">Aurreko GRaL-ak</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="autoebaluazioa.html">Autoebaluazioa</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="about_us.html">About Us</a>
+        </li>
+      </ul>
     </div>
+  </nav>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+  <div class="jumbotron" style="background-image: url('https://t4.ftcdn.net/jpg/05/08/80/19/360_F_508801991_UTsCAOorx25USitqonfRADueJlzyjhDq.jpg');">
+      <div class="banner-text text-center">
+        <h1 class="text-white">About Us</h1>
+      </div>
+    </div>
+  </div>
+  <div class="container mt-5">
+    <p>Webgune honen helburua, Informatika Fakultateko gradu amaierako lanari buruzko informazioa eskaintzea da, bai
+      ikasle zein irakasleentzako. Bertan, araudi(ar)en kontsulta, deialdi desberdinen egutegiak, aurreko GrALen
+      memorien kontsulta eta ulermena autoebaluatzeko galdetegiak agertuko dira. <br><br>
+      Webgune hau <b>EZ</b> da ofiziala. Informatika Ingeniaritzako Pertsonen eta Konputagailuen arteko Elkarrekintza
+      (PKE) ikasgaiaren taldeko lan bat da. Informazio guztia EHUko iturrietatik lortuta dago. Informazio originala
+      lortzeko EHU-ko <a target="_blank"
+        href="https://www.ehu.eus/eu/web/informatika-fakultatea/ikas/ikasketak/gradu-amaierako-proiektua">webgune
+        ofizialera</a> jo. </p>
+  </div>
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="text-center mt-4">
+          <img
+            src="https://img.asmedia.epimg.net/resizer/XESHuE2pwf0Ufh69aOgldvQSE3E=/1472x1104/cloudfront-eu-central-1.images.arcpublishing.com/diarioas/6URC6QRBRBFPFDSJHBQL5AKLVU.jpg"
+            alt="Ibai Heras" class="rounded-image">
+          <h3 class="mt-2">Ibai Heras</h3>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="text-center mt-4">
+          <img
+            src="https://phantom-elmundo.unidadeditorial.es/fe0a0164fbdc5777c24023991a072829/crop/0x0/673x448/f/webp/assets/multimedia/imagenes/2020/05/14/15894553910458.jpg"
+            alt="Miembro 2" class="rounded-image">
+          <h3 class="mt-2">Pablo Lopez</h3>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="text-center mt-4">
+          <img src="https://i.ytimg.com/vi/pIPA_EhrY1o/hqdefault.jpg" alt="Lander Soriano" class="rounded-image">
+          <h3 class="mt-2">Lander Soriano</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </body>
 
 </html>
