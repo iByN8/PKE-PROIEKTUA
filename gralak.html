@@ -40,8 +40,8 @@
     </nav>
 
     <div class="container" style="margin-top: 60px;">
-        <div id="miCarrusel" class="carousel slide mx-auto" data-ride="carousel" style="width: 300px; height: 300px;">
-            <div class="carousel-inner">
+        <div id="miCarrusel" class="carousel slide mx-auto" data-ride="carousel" style="width: 400px; height: 300px;">
+            <div class="carousel-inner mx-auto" style="width: 300px; height: 300px;">
                 <div class="carousel-item active">              
                         <img src="imagenes/f1.png" class="d-block w-100" alt="Imagen 1">
                 </div>
@@ -63,13 +63,19 @@
             </div>
             <a class="carousel-control-prev" href="#miCarrusel" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Anterior</span>
+                <span class="sr-only">Aurrekoa</span>
             </a>
             <a class="carousel-control-next" href="#miCarrusel" role="button" data-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Siguiente</span>
+                <span class="sr-only">Hurrengoa</span>
             </a>
     </div>
+    <style>
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            background-color: black;
+        }
+    </style>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
