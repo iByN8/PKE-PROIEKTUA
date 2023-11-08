@@ -72,47 +72,51 @@
     </div>
 
     <div class="d-flex flex-column justify-content-center align-items-center min-vh-100" style="margin-top: 60px;">
-        <button id="hasiButton" onclick="gralakErakutsi()" class="btn btn-primary btn-lg mx-auto">GrAL guztiak ikusi</button>
+        <button id="erakutsiButton" onclick="gralakErakutsi()" class="btn btn-primary btn-lg mx-auto">GrAL guztiak ikusi</button>
     </div>
 
-    <div class="d-flex justify-content-center">
+    <div class="d-flex justify-content-center" style="margin-bottom: 50px;">
         <div id="SI" class="form-check mr-5" style="display: none;">
-            <input class="form-check-input" type="checkbox" name="checkbox" id="checkbox1" checked>
+            <input class="form-check-input" type="checkbox" name="checkbox" id="checkbox1" onchange="siAldatuDa()" checked>
             <label class="form-check-label" for="checkbox1">Software Ingeniaritza</label>
         </div>
         <div id="KI" class="form-check mx-5" style="display: none;">
-            <input class="form-check-input" type="checkbox" name="checkbox" id="checkbox2" checked>
+            <input class="form-check-input" type="checkbox" name="checkbox" id="checkbox2" onchange="kiAldatuDa()" checked>
             <label class="form-check-label" for="checkbox2">Konputagailuen Ingeniaritza</label>
         </div>
         <div id="K" class="form-check ml-5" style="display: none;">
-            <input class="form-check-input" type="checkbox" name="checkbox" id="checkbox3" checked>
+            <input class="form-check-input" type="checkbox" name="checkbox" id="checkbox3" onchange="kAldatuDa()" checked>
             <label class="form-check-label" for="checkbox3">Konputazioa</label>
         </div>
     </div>
 
-    <div id="gralDisplay" class="container justify-content-center" style="display: none;">
-        <div class="row">
+    <div id="gralDisplay" class="container flex-column justify-content-center align-items-center" style="display:none;">
+        <div class="row" style=" width: 750px;">
             <div class="col-md-4">
-                <img src="imagenes/f1.png" class="img-fluid">
+                <img id="f1" src="imagenes/f1.png" class="img-fluid">
             </div>
             <div class="col-md-4">
-                <img src="imagenes/f2.png" class="img-fluid">
+                <img id="f2" src="imagenes/f2.png" class="img-fluid">
             </div>
             <div class="col-md-4">
-                <img src="imagenes/f3.png" class="img-fluid">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-4">
-                <img src="imagenes/f4.png" class="img-fluid">
-            </div>
-            <div class="col-md-4">
-                <img src="imagenes/f5.png" class="img-fluid">
-            </div>
-            <div class="col-md-4">
-                <img src="imagenes/f6.png" class="img-fluid">
+                <img id="f3" src="imagenes/f3.png" class="img-fluid">
             </div>
         </div>
+        <div class="row" style=" width: 750px;">
+            <div class="col-md-4">
+                <img id="f4" src="imagenes/f4.png" class="img-fluid">
+            </div>
+            <div class="col-md-4">
+                <img id="f5" src="imagenes/f5.png" class="img-fluid">
+            </div>
+            <div class="col-md-4">
+                <img id="f6" src="imagenes/f6.png" class="img-fluid">
+            </div>
+        </div>
+    </div>
+
+    <div class="flex-column justify-content-center align-items-center min-vh-100" style="margin-top: 60px; margin-bottom: 60px;">
+        <button id="ezkutatuButton" onclick="gralakEzkutatu()" class="btn btn-primary btn-lg mx-auto" style="display: none;">Atzera itzuli</button>
     </div>
 
     <style>
@@ -125,12 +129,51 @@
     <script>
         function gralakErakutsi() {
             document.getElementById("miCarrusel").style="display:none;";
-            document.getElementById("hasiButton").style="display:none;";
+            document.getElementById("erakutsiButton").style="display:none;";
             document.getElementById("SI").style="display:flex;"
             document.getElementById("KI").style="display:flex;"
             document.getElementById("K").style="display:flex;"
             document.getElementById("gralDisplay").style="display:flex;"
-
+            document.getElementById("ezkutatuButton").style="display:flex;"
+        }
+        function gralakEzkutatu() {
+            document.getElementById("miCarrusel").style="display:flex; width: 400px; height: 300px;";
+            document.getElementById("erakutsiButton").style="display:flex;";
+            document.getElementById("SI").style="display:none;"
+            document.getElementById("KI").style="display:none;"
+            document.getElementById("K").style="display:none;"
+            document.getElementById("gralDisplay").style="display:none;"
+            document.getElementById("ezkutatuButton").style="display:none;"
+        }
+        function siAldatuDa() {
+            var checkbox = document.getElementById('checkbox1');
+            if (checkbox.checked) {
+                document.getElementById("f1").style="display:flex;"
+                document.getElementById("f2").style="display:flex;"
+            } else {
+                document.getElementById("f1").style="display:none;";
+                document.getElementById("f2").style="display:none;";
+            }
+        }
+        function kiAldatuDa() {
+            var checkbox = document.getElementById('checkbox2');
+            if (checkbox.checked) {
+                document.getElementById("f3").style="display:flex;"
+                document.getElementById("f4").style="display:flex;"
+            } else {
+                document.getElementById("f3").style="display:none;";
+                document.getElementById("f4").style="display:none;";
+            }
+        }
+        function kAldatuDa() {
+            var checkbox = document.getElementById('checkbox3');
+            if (checkbox.checked) {
+                document.getElementById("f5").style="display:flex;"
+                document.getElementById("f6").style="display:flex;"
+            } else {
+                document.getElementById("f5").style="display:none;";
+                document.getElementById("f6").style="display:none;";
+            }
         }
     </script>
 
