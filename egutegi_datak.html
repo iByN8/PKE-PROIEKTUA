@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GRaL Informazioa</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.css">
+
 </head>
 
 <body>
@@ -41,13 +43,56 @@
 
 
     <div class="container mt-5">
-        <h1>¡Bienvenido a mi página web!</h1>
-        <p>Esta es una simple página web usando Bootstrap.</p>
+        <div id="calendario" style="overflow: scroll;"></div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/locale/eu.js"></script>
+
+
+    <script>
+        $(document).ready(function() {
+            $('#calendario').fullCalendar({
+                header: {
+                    left: 'prev,next today',
+                    center: 'title'
+                },
+                defaultView: 'month', 
+                events: [
+                    {
+                        title: 'TFGa GAURen matrikulatu eta GAUR bitartez defentsa eskaria egiteko azken eguna (1.Konbokatoria)',
+                        start: '2023-10-19',
+                        end: '2023-10-19T23:59:59'
+                    },
+                    {
+                        title: 'TFGa GAURen matrikulatu eta GAUR bitartez defentsa eskaria egiteko azken eguna (2.Konbokatoria)',
+                        start: '2024-01-25',
+                        end: '2023-01-25T23:59:59'
+                    },
+                    {
+                        title: 'TFGa GAURen matrikulatu eta GAUR bitartez defentsa eskaria egiteko azken eguna (3.Konbokatoria)',
+                        start: '2024-06-17',
+                        end: '2023-06-17T23:59:59'
+                    }
+                ],
+                locale: 'eu',
+                eventClick: function(event, element) {
+                element.popover({
+                    title: event.title,
+                    content: 'Fecha: ' + moment(event.end).format('YYYY-MM-DD HH:mm'),
+                    trigger: 'hover',
+                    placement: 'auto',
+                    container: 'body'
+                });
+            }
+            });
+        });
+    </script>
+
 </body>
 
 </html>
