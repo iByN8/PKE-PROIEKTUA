@@ -80,13 +80,13 @@
                     }
                 ],
                 locale: 'eu',
-                eventClick: function(event, element) {
+                eventRender: function(event, element) {
                 element.popover({
                     title: event.title,
                     content: 'Fecha: ' + moment(event.end).format('YYYY-MM-DD HH:mm'),
                     trigger: 'hover',
                     placement: 'auto',
-                    container: 'body'
+                    container: 'body',
                 });
             }
             });
