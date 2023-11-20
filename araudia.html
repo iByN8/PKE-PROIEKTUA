@@ -11,7 +11,11 @@
     <style>
         .hidden-text {
             display: none;
-            /* Oculta los elementos con la clase 'hidden-text' por defecto */
+        }
+
+        hr {
+            width: 70%;
+            border: 1px solid rgba(0, 0, 0, 0.3);
         }
     </style>
 
@@ -58,13 +62,11 @@
     </div>
 
     <div class="container mt-5">
-        <!-- Título que se puede hacer clic para mostrar/ocultar el texto -->
         <h3 class="clickable-title" id="title1">Gradu Amaierako Lanaren izen ematea GAURen eta matrikula
             <i class="fas fa-chevron-down"></i>
         </h3>
-
-        <!-- Texto que se mostrará/ocultará -->
         <div class="hidden-text" id="text1">
+            <br>
             <p>Lanaren izen ematea graduaren 168 kreditu (oinarrizko 60, nahitaezko 66 eta hautazko 42) gainditu ondoren
                 egin ahal izango da eta graduak aipamena badu hautatutako aipamenaren edo espezialitatearen barruan egin
                 beharko da. Izena emateko GAUR aplikazioan egin behar da:
@@ -116,21 +118,20 @@
             GAUR >> matrikulak>> bestelako matrikulak </p>
             <div class="float-right">
                 <a href="#title"><i class="fas fa-chevron-up"></i></a>
-           </div>
+            </div>
 
 
         </div>
 
     </div>
-
+    <hr>
     <div class="container mt-5">
-        <!-- Título que se puede hacer clic para mostrar/ocultar el texto -->
         <h3 class="clickable-title" id="title2">GrALaren gauzatzea
             <i class="fas fa-chevron-down"></i>
         </h3>
 
-        <!-- Texto que se mostrará/ocultará -->
         <div class="hidden-text" id="text2">
+            <br>
             <p>Gradu Amaierako Lana titulazioarekin lotutako gaitasun orokorrak aplikatzeari eta oro har, ikaslearen
                 ikasketa arloko datu garrantzitsuak bilatu, kudeatu, antolatu eta interpretatzeari begira egingo da.
 
@@ -152,18 +153,17 @@
             </ol>
             <div class="float-right">
                 <a href="#title"><i class="fas fa-chevron-up"></i></a>
-           </div>
+            </div>
         </div>
     </div>
-
+    <hr>
     <div class="container mt-5">
-        <!-- Título que se puede hacer clic para mostrar/ocultar el texto -->
         <h3 class="clickable-title" id="title3">Informatika Fakultateko GrAL-aren araudia
             <i class="fas fa-chevron-down"></i>
         </h3>
 
-        <!-- Texto que se mostrará/ocultará -->
         <div class="hidden-text" id="text3">
+            <br>
             <h5>1. ARTIKULUA: ALDERDI OROKORRAK ETA IZAERA</h5>
 
 
@@ -467,22 +467,21 @@
             </ul>
             <div class="float-right">
                 <a href="#title"><i class="fas fa-chevron-up"></i></a>
-           </div>
+            </div>
 
 
 
         </div>
 
     </div>
-
+    <hr>
     <div class="container mt-5">
-        <!-- Título que se puede hacer clic para mostrar/ocultar el texto -->
         <h3 class="clickable-title" id="title4">EHU-ko GrAL Araudi Osoa
             <i class="fas fa-chevron-down"></i>
         </h3>
 
-        <!-- Texto que se mostrará/ocultará -->
         <div class="hidden-text" id="text4">
+            <br>
             <h5>1. artikulua.- Helburuaz eta aplikazio eremuaz.</h5>
 
             <p>1.- Arautegi honek UPV/EHUk ematen dituen graduko ikasketa planetan zehaztutako Gradu Amaierako Lana
@@ -654,25 +653,25 @@
             <p>5.- Nolanahi ere, gradu amaierako lanen kalifikazioak urriaren 31 baino lehen ageri behar da
                 matrikulatutako ikaslearen espedientean, gai honi dagokion atalean.</p>
 
-                <div class="float-right">
-                    <a href="#title"><i class="fas fa-chevron-up"></i></a>
-               </div>
+            <div class="float-right">
+                <a href="#title"><i class="fas fa-chevron-up"></i></a>
+            </div>
         </div>
     </div>
-
-    <!-- Agrega jQuery (necesario para el funcionamiento de Bootstrap) -->
+    <hr>
+    <footer class="bg-dark text-light text-center py-4">
+        <div class="container mt-3">
+          <p>&copy; 2023 PKE 8. Taldea. Webgune ez ofiziala.</p>
+        </div>
+      </footer>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <!-- Agrega los scripts de Bootstrap -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <script>
         $(document).ready(function () {
-            // Función para manejar los clics en los títulos
             $(".clickable-title").click(function () {
-                // Encuentra el texto oculto correspondiente al título clicado
                 var textId = $(this).attr("id").replace("title", "text");
                 $("#" + textId).toggle();
-                // Cambia la clase de la flecha en función del estado del texto
                 if ($("#" + textId).is(":visible")) {
                     $(this).find("i").removeClass("fa-chevron-down").addClass("fa-chevron-up");
                 } else {
