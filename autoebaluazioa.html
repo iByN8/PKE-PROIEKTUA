@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GRaL Informazioa</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
 </head>
 
 <body>
@@ -28,9 +29,10 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="gralak.html">Aurreko GRaL-ak</a>
-                  </li>
+                </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="autoebaluazioa.html">Autoebaluazioa<span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="autoebaluazioa.html">Autoebaluazioa<span
+                            class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="about_us.html">About Us</a>
@@ -39,19 +41,21 @@
         </div>
     </nav>
 
-    <div class="jumbotron jumbotron-fluid bg-light d-flex align-items-center" style="background-image: url('https://img.freepik.com/fotos-premium/signo-interrogacion-mano-banner-icono-pregunta-simbolo-sobre-fondo-negro-foto-concepto-duda-educacion-o-preguntas-frecuentes_526934-3369.jpg'); background-size: cover; background-position: center; height: 300px;">
-        <div class="container text-center">
-            <h1 class="display-4 d-none d-lg-block text-white" style="font-weight: 900;">Autoebaluazioa</h1>
-            <h1 class="h4 d-block d-lg-none text-white" style="font-weight: 900;">Autoebaluazioa</h1>        
+    <div class="jumbotron"
+        style="background-image: url('imagenes/galderak.jpg'); border-radius: 0%; ">
+        <div class="banner-text text-center">
+            <h1 class="text-white izenburu">Autoebaluazioa</h1>
         </div>
     </div>
-
+    
     <div class="d-flex flex-column justify-content-center align-items-center min-vh-100">
         <button id="hasiButton" onclick="mostrarIframe()" class="btn btn-primary btn-lg mx-auto">HASI</button>
     </div>
 
     <div id="iframe-container" style="display:none;" class="justify-content-center align-items-center min-vh-100">
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfn01jkeavpsWO8xsNO2QuS1waGm3ClQTUiuNwh2SXL4os3IQ/viewform?embedded=true" width="640" height="480" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+        <iframe
+            src="https://docs.google.com/forms/d/e/1FAIpQLSfn01jkeavpsWO8xsNO2QuS1waGm3ClQTUiuNwh2SXL4os3IQ/viewform?embedded=true"
+            width="640" height="480" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
 
     </div>
 
@@ -62,9 +66,9 @@
 
 <script>
     function mostrarIframe() {
-        document.getElementById("hasiButton").style="display:none;";
+        document.getElementById("hasiButton").style = "display:none;";
         document.getElementById("iframe-container").style.display = "flex";
     }
-    </script>
+</script>
 
 </html>
