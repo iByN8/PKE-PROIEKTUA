@@ -1,0 +1,26 @@
+.jumbotron {
+  padding-top: 10%;
+  padding-bottom: 10%;
+  background-size: cover;
+}
+
+.rounded-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.izenburu{
+  font-size: 64px;
+}
+
+.carousel {
+  max-height: 300px;
+  overflow: hidden;
+}
+
+.carousel-item img {
+  height: 100%;
+  width: 300px;
+}
