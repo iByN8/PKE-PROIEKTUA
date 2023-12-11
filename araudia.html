@@ -7,7 +7,7 @@
     <title>GRaL Informazioa</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-
+    <link href="styles.css" rel="stylesheet">
     <style>
         .hidden-text {
             display: none;
@@ -17,11 +17,42 @@
             width: 70%;
             border: 1px solid rgba(0, 0, 0, 0.3);
         }
+
+        .scroll-to-top-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            background-color: #007bff;
+            color: #fff;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 50px;
+            font-size: 24px;
+            transition: opacity 0.4s;
+        }
+
+        .scroll-to-top-btn i {
+            vertical-align: middle;
+        }
+
+        .scroll-to-top-btn:hover {
+            background-color: #ddd;
+        }
+
+        body {
+            position: relative;
+            height: 100%;
+        }
+
     </style>
 
 </head>
 
 <body>
+    <a href="#" class="scroll-to-top-btn"><i class="fas fa-arrow-up"></i></a>
+
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="index.html">GRaL Informazioa</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -52,7 +83,15 @@
         </div>
     </nav>
 
-
+    <div class="jumbotron" style=" background-image: url(https://lh4.googleusercontent.com/V1YJa4fIJeqUJVcNjo_VHx-RkXghAt_qJ6eefiKM-ctM2HOGt24op7mVBbsVvF-DkhGN_3cp-ytVcagAJX3JebM);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;border-radius: 0%;">
+        <div class="banner-text text-center">
+            <h1 class="text-white izenburu">Araudia</h1>
+        </div>
+    </div>
+    </div>
     <div class="container mt-5">
         <h1 id="title">Araudia</h1>
         <p>Gradu Amaierako Lana gauzatzeko, ikasle bakoitzak, banaka, lan original bat egin behar du, zuzendari baten
@@ -659,11 +698,12 @@
         </div>
     </div>
     <hr>
+
     <footer class="bg-dark text-light text-center py-4">
         <div class="container mt-3">
-          <p>&copy; 2023 PKE 8. Taldea. Webgune ez ofiziala.</p>
+            <p>&copy; 2023 PKE 8. Taldea. Webgune ez ofiziala.</p>
         </div>
-      </footer>
+    </footer>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
