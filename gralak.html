@@ -77,7 +77,13 @@
         </div>
     </div>
 
-    <div id="contenedor"></div>
+    <div id="ontzia" class="container mt-4">
+        <div id="zutabe" class="row">
+
+        </div>
+    </div>
+
+    
 
     <style>
         .carousel-control-prev-icon,
@@ -85,14 +91,14 @@
             background-color: black;
         }
 
-        #contenedor {
+        #ontzia {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
         }
 
-        .columna {
-            flex: 0 0 25%; /* 30% de ancho, con margen */
+        .zutabe {
+            flex: 0 0 25%;
             margin: 10px;
         }
 
@@ -133,10 +139,9 @@
         ];
 
 
-        function cargarImagenes() {
+        function argazkiaKargatu() {
             var carouselInner = document.querySelector("#miCarrusel .carousel-inner");
 
-            // Itera sobre el array de imágenes y crea los elementos del carrusel
             for (var i = 0; i < imagenes.length; i++) {
                 var item = document.createElement("div");
                 item.className = "carousel-item";
@@ -146,7 +151,6 @@
                 img.className = "d-block w-100";
                 img.alt = "Slide " + (i + 1);
 
-                // La primera imagen será activa
                 if (i === 0) {
                     item.classList.add("active");
                 }
@@ -156,20 +160,23 @@
             }
         }
 
-        cargarImagenes();
+        argazkiaKargatu();
 
-        function mostrarImagenesEnTresColumnas() {
-            var contenedor = document.getElementById('contenedor');
+        function hiruZutabe() {
+            var ontzia = document.getElementById('ontzia');
+            var zutabe = document.getElementById('zutabe');
     
             for (var i = 0; i < imagenes.length; i++) {
-                var columna = document.createElement('div');
-                columna.className = 'columna';
-    
+                var argazki = document.createElement('div');
+                argazki.className = 'argazki';
+                argazki.classList = 'col-lg-4 col-md-6 col-xs-12 mb-3';
                 var imagen = document.createElement('img');
                 imagen.src = imagenes[i];
+                imagen.className = 'img-fluid img-thumbnail img-xs';
     
-                columna.appendChild(imagen);
-                contenedor.appendChild(columna);
+                argazki.appendChild(imagen);
+                zutabe.appendChild(argazki);
+                ontzia.appendChild(zutabe);
             }
         }
         
@@ -179,7 +186,7 @@
             document.getElementById("SI").style = "display:flex;"
             document.getElementById("KI").style = "display:flex;"
             document.getElementById("K").style = "display:flex;"
-            mostrarImagenesEnTresColumnas();
+            hiruZutabe();
             document.getElementById("ezkutatuButton").style = "display:flex;"
            
         }
@@ -191,98 +198,103 @@
             document.getElementById("KI").style = "display:none;"
             document.getElementById("K").style = "display:none;"
             document.getElementById("ezkutatuButton").style = "display:none;"
-            ocultarImagenesEnTresColumnas();
+            hiruZutabeEzkutatu();
         }
 
-        function ocultarImagenesEnTresColumnas() {
-            // Borra el contenido del contenedor
-            var contenedor = document.getElementById('contenedor');
-            contenedor.innerHTML = "";
+        function hiruZutabeEzkutatu() {
+            var ontzia = document.getElementById('ontzia');
+            ontzia.innerHTML = "";
         }
 
         function siAldatuDa() {
             var checkboxSI = document.getElementById("checkbox1");
-            var contenedor = document.getElementById('contenedor');
+            var ontzia = document.getElementById('ontzia');
 
             if (checkboxSI.checked) {
-                // Mostrar imágenes de i1 a i17
-                mostrarImagenesEnGrupo(0, 7);
+                argarkiakTaldeka(0, 7);
             } else {
-                // Ocultar imágenes de i1 a i17
-                mostrarImagenesEnGrupo(0, 7);
+                argarkiakTaldeka(0, 7);
             }
         }
 
         function kiAldatuDa() {
             var checkboxKI = document.getElementById("checkbox2");
-            var contenedor = document.getElementById('contenedor');
+            var ontzia = document.getElementById('ontzia');
 
             if (checkboxKI.checked) {
-                // Mostrar imágenes de i8 a i14
-                mostrarImagenesEnGrupo(7, 14);
+                argarkiakTaldeka(7, 14);
             } else {
-                // Ocultar imágenes de i8 a i14
-                mostrarImagenesEnGrupo(7, 14);
+                argarkiakTaldeka(7, 14);
             }
         }
 
         function kAldatuDa() {
             var checkboxK = document.getElementById("checkbox3");
-            var contenedor = document.getElementById('contenedor');
+            var ontzia = document.getElementById('ontzia');
 
             if (checkboxK.checked) {
-                // Mostrar imágenes de i15 a i21
-                mostrarImagenesEnGrupo(14, 21);
+                argarkiakTaldeka(14, 21);
             } else {
-                // Ocultar imágenes de i15 a i21
-                mostrarImagenesEnGrupo(14, 21);
+                argarkiakTaldeka(14, 21);
             }
         }
 
-        function mostrarImagenesEnGrupo(inicio, fin) {
-            // Limpiar el contenedor
-            var contenedor = document.getElementById('contenedor');
+        function argarkiakTaldeka(inicio, fin) {
+            var ontzia = document.getElementById('ontzia');
             var checkboxK = document.getElementById("checkbox3");
             var checkboxKI = document.getElementById("checkbox2");
             var checkboxSI = document.getElementById("checkbox1");
-            contenedor.innerHTML = "";
+            ontzia.innerHTML = "";
 
             if (checkboxK.checked) {
                 for (var i = 14; i < 21; i++) {
-                    var columna = document.createElement('div');
-                    columna.className = 'columna';
+                    var zutabe = document.createElement('div');
+                    zutabe.className = 'zutabe';
     
                     var imagen = document.createElement('img');
                     imagen.src = imagenes[i];
     
-                    columna.appendChild(imagen);
-                    contenedor.appendChild(columna);
+                    zutabe.appendChild(imagen);
+                    ontzia.appendChild(zutabe);
                 }
             }
 
             if (checkboxKI.checked) {
                 for (var i = 7; i < 14; i++) {
-                    var columna = document.createElement('div');
-                    columna.className = 'columna';
+                    var zutabe = document.createElement('div');
+                    zutabe.className = 'zutabe';
     
                     var imagen = document.createElement('img');
                     imagen.src = imagenes[i];
     
-                    columna.appendChild(imagen);
-                    contenedor.appendChild(columna);
+                    zutabe.appendChild(imagen);
+                    ontzia.appendChild(zutabe);
                 }
             }
 
             if (checkboxSI.checked) {
                 for (var i = 0; i < 7; i++) {
-                    var columna = document.createElement('div');
-                    columna.className = 'columna';
+                    var zutabe = document.createElement('div');
+                    zutabe.className = 'zutabe';
     
                     var imagen = document.createElement('img');
                     imagen.src = imagenes[i];
     
-                    columna.appendChild(imagen);
-                    contenedor.appendChild(columna);
+                    zutabe.appendChild(imagen);
+                    ontzia.appendChild(zutabe);
+                }
+            }
+
+            if (!checkboxK.checked && !checkboxKI.checked && !checkboxSI.checked) {
+                for (var i = 0; i < 21; i++) {
+                    var zutabe = document.createElement('div');
+                    zutabe.className = 'zutabe';
+    
+                    var imagen = document.createElement('img');
+                    imagen.src = imagenes[i];
+    
+                    zutabe.appendChild(imagen);
+                    ontzia.appendChild(zutabe);
                 }
             }
 
