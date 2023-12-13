@@ -4,13 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GRaL Informazioa</title>
+    <title>GrAL Informazioa</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <link rel="shortcut icon" href="//egela.ehu.eus/pluginfile.php/1/theme_ehu/favicon/1701678785/favicon.ico">
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="index.html">GRaL Informazioa</a>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top-sm">
+        <a class="navbar-brand" href="index.html">GrAL Informazioa</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -27,7 +29,7 @@
                     <a class="nav-link" href="egutegi_datak.html">Datak/Egutegia</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="gralak.html">Aurreko GRaL-ak<span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="gralak.html">Aurreko GrAL-ak<span class="sr-only">(current)</span></a>
                   </li>
                 <li class="nav-item">
                     <a class="nav-link" href="autoebaluazioa.html">Autoebaluazioa</a>
@@ -38,8 +40,16 @@
             </ul>
         </div>
     </nav>
-
-    <div class="container" style="margin-top: 10px;">
+    <div class="wrapper">
+        <div class="jumbotron" style="background-image: url(https://tesisymasters.mx/wp-content/uploads/2022/09/TYM-MEX-nueva-portada-1-5.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;border-radius: 0%;">
+        <div class="banner-text text-center">
+            <h1 class="text-white izenburu">Aurreko Urtetako GrAl-ak</h1>
+        </div>
+    </div>
+    <div class="container my-4" >
         <div id="miCarrusel" class="carousel slide mx-auto" data-ride="carousel" style="width: 90%; height: 90%; max-width: 427px; max-height: 660px;">
             <div class="carousel-inner mx-auto" style="width: 80%; height: 80%"></div>
             <a class="carousel-control-prev" href="#miCarrusel" role="button" data-slide="prev">
@@ -52,8 +62,7 @@
             </a>
         </div>
     </div>
-
-    <div class="d-flex flex-column justify-content-center align-items-center min-vh-100 mx-auto" style="margin-top: 10px;">
+    <div class="d-flex flex-column justify-content-center align-items-center min-vh-100 mx-auto my-4">
         <button id="erakutsiButton" onclick="gralakErakutsi()" class="btn btn-primary btn-lg mx-auto">GrAL guztiak
             ikusi</button>
         </div>
@@ -77,13 +86,18 @@
         </div>
     </div>
 
-    <div id="ontzia" class="container mt-4">
+    <div id="ontzia" class="container my-4">
         <div id="zutabe" class="row">
 
         </div>
     </div>
 
-    
+    </div>
+    <footer class="footer bg-dark text-light text-center py-4">
+        <div class="container mt-3">
+            <p>&copy; 2023 PKE 8. Taldea. Webgune ez ofiziala.</p>
+        </div>
+    </footer>
 
     <style>
         .carousel-control-prev-icon,
@@ -181,7 +195,7 @@
         }
         
         function gralakErakutsi() {
-            document.getElementById("miCarrusel").style = "display:none;";
+            //document.getElementById("miCarrusel").style = "display:none;";
             document.getElementById("erakutsiButton").style = "display:none;";
             document.getElementById("SI").style = "display:flex;"
             document.getElementById("KI").style = "display:flex;"
@@ -192,7 +206,7 @@
         }
 
         function gralakEzkutatu() {
-            document.getElementById("miCarrusel").style = "display:flex; width: 90%; height: 90%; max-width: 427px; max-height: 660px;";
+            //document.getElementById("miCarrusel").style = "display:flex; width: 90%; height: 90%; max-width: 427px; max-height: 660px;";
             document.getElementById("erakutsiButton").style = "display:flex;";
             document.getElementById("SI").style = "display:none;"
             document.getElementById("KI").style = "display:none;"

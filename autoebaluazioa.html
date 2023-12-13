@@ -4,14 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GRaL Informazioa</title>
+    <title>GrAL Informazioa</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="styles.css" rel="stylesheet">
+    <link rel="shortcut icon" href="//egela.ehu.eus/pluginfile.php/1/theme_ehu/favicon/1701678785/favicon.ico">
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="index.html">GRaL Informazioa</a>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top-sm">
+        <a class="navbar-brand" href="index.html">GrAL Informazioa</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -28,7 +29,7 @@
                     <a class="nav-link" href="egutegi_datak.html">Datak/Egutegia</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="gralak.html">Aurreko GRaL-ak</a>
+                    <a class="nav-link" href="gralak.html">Aurreko GrAL-ak</a>
                 </li>
                 <li class="nav-item active">
                     <a class="nav-link" href="autoebaluazioa.html">Autoebaluazioa<span
@@ -40,14 +41,15 @@
             </ul>
         </div>
     </nav>
-
-    <div class="jumbotron"
-        style="background-image: url('imagenes/galderak.jpg'); border-radius: 0%; ">
+    <div class="wrapper">
+    <div class="jumbotron" style="background-image: url(imagenes/galderak.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;border-radius: 0%;">
         <div class="banner-text text-center">
             <h1 class="text-white izenburu">Autoebaluazioa</h1>
         </div>
     </div>
-    
     <div class="d-flex flex-column justify-content-center align-items-center min-vh-100">
         <button id="hasiButton" onclick="mostrarIframe()" class="btn btn-success btn-lg mx-auto">HASI</button>
     </div>
@@ -58,13 +60,12 @@
             width="640" height="480" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
 
     </div>
-    <!--
+    </div>
     <footer class="bg-dark text-light text-center py-4">
         <div class="container mt-3">
-          <p>&copy; 2023 PKE 8. Taldea. Webgune ez ofiziala.</p>
+            <p>&copy; 2023 PKE 8. Taldea. Webgune ez ofiziala.</p>
         </div>
-      </footer>
-      -->
+    </footer>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>

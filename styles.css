@@ -12,7 +12,11 @@
 }
 
 .izenburu{
-  font-size: 64px;
+  font-size: clamp;
+  overflow-wrap: break-word;
+  @media (min-width: 1200px) {
+    font-size: 64px; /* Font size for larger screens */
+  }
 }
 
 .carousel {
@@ -25,7 +29,45 @@
   width: 300px;
 }
 
+@media (max-width: 992px) {
+  .sticky-top-sm {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1030;
+  }
+}
 
-footer {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.wrapper {
+  flex: 1;
+}
+
+.footer {
   margin-top: auto;
+  flex-shrink: 0;
+  background-color: #f5f5f5;
+  padding: 20px;
+  width: 100%;
+}
+
+.cont-hr {
+  display: flex;
+  justify-content: center; /* Horizontally center contents */
+}
+
+.centered-hr {
+  color: black;
+  width: 75%; /* Adjust width as needed */
 }
