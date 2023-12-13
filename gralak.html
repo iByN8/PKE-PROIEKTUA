@@ -30,7 +30,7 @@
                 </li>
                 <li class="nav-item active">
                     <a class="nav-link" href="gralak.html">Aurreko GrAL-ak<span class="sr-only">(current)</span></a>
-                  </li>
+                </li>
                 <li class="nav-item">
                     <a class="nav-link" href="autoebaluazioa.html">Autoebaluazioa</a>
                 </li>
@@ -45,51 +45,52 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;border-radius: 0%;">
-        <div class="banner-text text-center">
-            <h1 class="text-white izenburu">Aurreko Urtetako GrAl-ak</h1>
+            <div class="banner-text text-center">
+                <h1 class="text-white izenburu">Aurreko Urtetako GrAl-ak</h1>
+            </div>
         </div>
-    </div>
-    <div class="container my-4" >
-        <div id="miCarrusel" class="carousel slide mx-auto" data-ride="carousel" style="width: 90%; height: 90%; max-width: 427px; max-height: 660px;">
-            <div class="carousel-inner mx-auto" style="width: 80%; height: 80%"></div>
-            <a class="carousel-control-prev" href="#miCarrusel" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Anterior</span>
-            </a>
-            <a class="carousel-control-next" href="#miCarrusel" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Siguiente</span>
-            </a>
+        <div class="container my-4">
+            <div id="miCarrusel" class="carousel slide mx-auto" data-ride="carousel"
+                style="width: 90%; height: 90%; max-width: 427px; max-height: 660px;">
+                <div class="carousel-inner mx-auto" style="width: 80%; height: 80%"></div>
+                <a class="carousel-control-prev" href="#miCarrusel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Anterior</span>
+                </a>
+                <a class="carousel-control-next" href="#miCarrusel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Siguiente</span>
+                </a>
+            </div>
         </div>
-    </div>
-    <div class="d-flex flex-column justify-content-center align-items-center min-vh-100 mx-auto my-4">
-        <button id="erakutsiButton" onclick="gralakErakutsi()" class="btn btn-primary btn-lg mx-auto">GrAL guztiak ikusi</button>
-    </div>
+        <div class="d-flex flex-column justify-content-center align-items-center min-vh-100 mx-auto my-4">
+            <button id="erakutsiButton" onclick="gralakErakutsi()" class="btn btn-primary btn-lg mx-auto">GrAL guztiak
+                ikusi</button>
+        </div>
 
-    <div class="flex-column justify-content-center align-items-center min-vh-100" style="margin-bottom: 60px;">
-        <button id="ezkutatuButton" onclick="gralakEzkutatu()" class="btn btn-primary btn-lg mx-auto" style="display: none;">Atzera itzuli</button>
-    </div>
+        <div class="flex-column justify-content-center align-items-center min-vh-100" style="margin-bottom: 60px;">
+            <button id="ezkutatuButton" onclick="gralakEzkutatu()" class="btn btn-primary btn-lg mx-auto"
+                style="display: none;">Atzera itzuli</button>
+        </div>
 
-    <div class="d-flex flex-wrap justify-content-center mb-4">
-        <div id="SI" class="form-check mb-2 mr-2" style="display: none;">
-            <input class="form-check-input" type="checkbox" name="checkbox" id="checkbox1" onchange="siAldatuDa()">
-            <label class="form-check-label" for="checkbox1">Software Ingeniaritza</label>
+        <div class="d-flex flex-wrap justify-content-center mb-4">
+            <div id="SI" class="form-check mb-2 mr-2" style="display: none;">
+                <input class="form-check-input" type="checkbox" name="checkbox" id="checkbox1" onchange="siAldatuDa()">
+                <label class="form-check-label" for="checkbox1">Software Ingeniaritza</label>
+            </div>
+            <div id="KI" class="form-check mb-2 mx-2" style="display: none;">
+                <input class="form-check-input" type="checkbox" name="checkbox" id="checkbox2" onchange="kiAldatuDa()">
+                <label class="form-check-label" for="checkbox2">Konputagailuen Ingeniaritza</label>
+            </div>
+            <div id="K" class="form-check mb-2 ml-2" style="display: none;">
+                <input class="form-check-input" type="checkbox" name="checkbox" id="checkbox3" onchange="kAldatuDa()">
+                <label class="form-check-label" for="checkbox3">Konputazioa</label>
+            </div>
         </div>
-        <div id="KI" class="form-check mb-2 mx-2" style="display: none;">
-            <input class="form-check-input" type="checkbox" name="checkbox" id="checkbox2" onchange="kiAldatuDa()">
-            <label class="form-check-label" for="checkbox2">Konputagailuen Ingeniaritza</label>
-        </div>
-        <div id="K" class="form-check mb-2 ml-2" style="display: none;">
-            <input class="form-check-input" type="checkbox" name="checkbox" id="checkbox3" onchange="kAldatuDa()">
-            <label class="form-check-label" for="checkbox3">Konputazioa</label>
-        </div>
-    </div>
 
-    <div id="ontzia" class="container my-4">
-        <div id="zutabe" class="row">
-
+        <div id="ontzia" class="container my-4">
+            
         </div>
-    </div>
 
     </div>
     <footer class="footer bg-dark text-light text-center py-4">
@@ -143,7 +144,7 @@
             "imagenes/i13.jpg",
             "imagenes/i14.jpg",
             "imagenes/i15.jpg",
-            "imagenes/i16.jpg", 
+            "imagenes/i16.jpg",
             "imagenes/i17.jpg",
             "imagenes/i18.jpg",
             "imagenes/i19.jpg",
@@ -177,8 +178,14 @@
 
         function hiruZutabe() {
             var ontzia = document.getElementById('ontzia');
-            var zutabe = document.getElementById('zutabe');
-    
+
+            // Limpiamos el contenido existente
+            ontzia.innerHTML = "";
+
+            // Creamos un nuevo elemento zutabe
+            var zutabe = document.createElement('div');
+            zutabe.id = 'zutabe';
+
             for (var i = 0; i < imagenes.length; i++) {
                 var argazki = document.createElement('div');
                 argazki.className = 'argazki';
@@ -186,12 +193,12 @@
                 var imagen = document.createElement('img');
                 imagen.src = imagenes[i];
                 imagen.className = 'img-fluid img-thumbnail img-xs';
-    
+
                 argazki.appendChild(imagen);
                 zutabe.appendChild(argazki);
-                ontzia.appendChild(zutabe);
+
             }
-            
+            ontzia.appendChild(zutabe);
 
         }
 
@@ -199,8 +206,8 @@
             var ontzia = document.getElementById('ontzia');
             ontzia.innerHTML = "";
         }
-        
-        
+
+
         function siAldatuDa() {
             var checkboxSI = document.getElementById("checkbox1");
             var ontzia = document.getElementById('ontzia');
@@ -245,10 +252,10 @@
                 for (var i = 14; i < 21; i++) {
                     var zutabe = document.createElement('div');
                     zutabe.className = 'zutabe';
-    
+
                     var imagen = document.createElement('img');
                     imagen.src = imagenes[i];
-    
+
                     zutabe.appendChild(imagen);
                     ontzia.appendChild(zutabe);
                 }
@@ -258,10 +265,10 @@
                 for (var i = 7; i < 14; i++) {
                     var zutabe = document.createElement('div');
                     zutabe.className = 'zutabe';
-    
+
                     var imagen = document.createElement('img');
                     imagen.src = imagenes[i];
-    
+
                     zutabe.appendChild(imagen);
                     ontzia.appendChild(zutabe);
                 }
@@ -271,10 +278,10 @@
                 for (var i = 0; i < 7; i++) {
                     var zutabe = document.createElement('div');
                     zutabe.className = 'zutabe';
-    
+
                     var imagen = document.createElement('img');
                     imagen.src = imagenes[i];
-    
+
                     zutabe.appendChild(imagen);
                     ontzia.appendChild(zutabe);
                 }
@@ -284,10 +291,10 @@
                 for (var i = 0; i < 21; i++) {
                     var zutabe = document.createElement('div');
                     zutabe.className = 'zutabe';
-    
+
                     var imagen = document.createElement('img');
                     imagen.src = imagenes[i];
-    
+
                     zutabe.appendChild(imagen);
                     ontzia.appendChild(zutabe);
                 }
@@ -303,7 +310,8 @@
             document.getElementById("KI").style = "display:flex;"
             document.getElementById("K").style = "display:flex;"
             hiruZutabe();
-            argarkiakTaldeka();   
+            argarkiakTaldeka();
+
         }
 
         function gralakEzkutatu() {
@@ -316,10 +324,10 @@
             hiruZutabeEzkutatu();
         }
 
-        
 
 
-        
+
+
     </script>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
