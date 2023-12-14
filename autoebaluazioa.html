@@ -50,16 +50,120 @@
             <h1 class="text-white izenburu">Autoebaluazioa</h1>
         </div>
     </div>
-    <div class="d-flex flex-column justify-content-center align-items-center min-vh-100">
-        <button id="hasiButton" onclick="mostrarIframe()" class="btn btn-success btn-lg mx-auto">HASI</button>
-    </div>
-
-    <div id="iframe-container" style="display:none;" class="justify-content-center align-items-center min-vh-100">
-        <iframe
-            src="https://docs.google.com/forms/d/e/1FAIpQLSfn01jkeavpsWO8xsNO2QuS1waGm3ClQTUiuNwh2SXL4os3IQ/viewform?embedded=true"
-            width="640" height="480" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
-
-    </div>
+    <div class="container my-5">
+        <form id="galdetegia">
+            <div class="galdera">
+              <h4>1.- Zenbat ikaslek lan egin dezakete batera GrAL batean?</h4>
+              <div class="form-check my-2">
+                <input class="form-check-input" type="radio" id="q1_1" name="q1" value="1">
+                <label class="form-check-label" for="q1_1">1</label>
+              </div>
+              <div class="form-check my-2">
+                <input class="form-check-input" type="radio" id="q1_2" name="q1" value="2">
+                <label class="form-check-label" for="q1_2">3</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" id="q1_3" name="q1" value="3">
+                <label class="form-check-label" for="q1_3">Asko</label>
+              </div>
+            </div>
+            <div class="galdera my-3">
+              <h4>2.- Ikasleak laguntza jaso dezake?</h4>
+              <div class="form-check my-2">
+                <input class="form-check-input" type="radio" id="q2_1" name="q2" value="1">
+                <label class="form-check-label" for="q2_1">Ez</label>
+              </div>
+              <div class="form-check my-2">
+                <input class="form-check-input" type="radio" id="q2_2" name="q2" value="2">
+                <label class="form-check-label" for="q2_2">Bai, zuzendari baten edo gehiagoren gidaritzapena</label>
+              </div>
+              <div class="form-check my-2">
+                <input class="form-check-input" type="radio" id="q2_3" name="q2" value="3">
+                <label class="form-check-label" for="q2_3">Bai, ikaslearen lagunena</label>
+              </div>
+            </div>
+            <div class="galdera my-3">
+              <h4>3.- Non matrikulatu behar duzu GrAL-a egiteko?</h4>
+              <div class="form-check my-2">
+                <input class="form-check-input" type="radio" id="q3_1" name="q3" value="1">
+                <label class="form-check-label" for="q3_1">EGela</label>
+              </div>
+              <div class="form-check my-2">
+                <input class="form-check-input" type="radio" id="q3_2" name="q3" value="2">
+                <label class="form-check-label" for="q3_2">Eusko Jaurlaritza</label>
+              </div>
+              <div class="form-check my-2">
+                <input class="form-check-input" type="radio" id="q3_3" name="q3" value="3">
+                <label class="form-check-label" for="q3_3">GAUR</label>
+              </div>
+            </div>
+            <div class="galdera my-3">
+              <h4>4.- Zenbat deialdi izan ditzake ikasle bakoitzak?</h4>
+              <div class="form-check my-2">
+                <input class="form-check-input" type="radio" id="q4_1" name="q4" value="1">
+                <label class="form-check-label" for="q4_1">Ikasturte bakoitzean bi deialdi</label>
+              </div>
+              <div class="form-check my-2">
+                <input class="form-check-input" type="radio" id="q4_2" name="q4" value="2">
+                <label class="form-check-label" for="q4_2">Hilero deialdi bat</label>
+              </div>
+              <div class="form-check my-2">
+                <input class="form-check-input" type="radio" id="q4_3" name="q4" value="3">
+                <label class="form-check-label" for="q4_3">Urtero deialdi bat</label>
+              </div>
+            </div>
+            <div class="galdera my-3">
+                <h4>5.- Zeintzuk dira Informatika Fakultatean eskaintzen diren graduak?</h4>
+                <div class="form-check my-2">
+                  <input class="form-check-input" type="radio" id="q5_1" name="q5" value="1">
+                  <label class="form-check-label" for="q5_1">Ingeniaritza Informatikoa eta Bideojoko Garapena</label>
+                </div>
+                <div class="form-check my-2">
+                  <input class="form-check-input" type="radio" id="q5_2" name="q5" value="2">
+                  <label class="form-check-label" for="q5_2">Bideojoko Garapena eta Adimen Artifiziala</label>
+                </div>
+                <div class="form-check my-2">
+                  <input class="form-check-input" type="radio" id="q5_3" name="q5" value="3">
+                  <label class="form-check-label" for="q5_3">Ingeniaritza Informatikoa eta Adimen Artifiziala</label>
+                </div>
+              </div>
+              <div class="galdera my-3">
+                <h4>6.- Zein espezialitateko GrAL-ak aurki ditzakezu web orri honetan?</h4>
+                <div class="form-check my-2">
+                  <input class="form-check-input" type="radio" id="q6_1" name="q6" value="1">
+                  <label class="form-check-label" for="q6_1">Software Ingeniaritza, Adimen Artifiziala eta Konputazioa</label>
+                </div>
+                <div class="form-check my-2">
+                  <input class="form-check-input" type="radio" id="q6_2" name="q6" value="2">
+                  <label class="form-check-label" for="q6_2">Software Ingeniaritza, Konputagailuen Ingeniaritza eta Konputazioa</label>
+                </div>
+                <div class="form-check my-2">
+                  <input class="form-check-input" type="radio" id="q6_3" name="q6" value="3">
+                  <label class="form-check-label" for="q6_3">Software Ingeniaritza, Adimen Artifiziala eta Konputagailuen Ingeniaritza</label>
+                </div>
+              </div>
+              <div class="galdera my-3">
+                <h4>7.- Zenbat kreditu behar dira GrAL-a egin ahal izateko?</h4>
+                <div class="form-check my-2">
+                  <input class="form-check-input" type="radio" id="q7_1" name="q7" value="1">
+                  <label class="form-check-label" for="q7_1">160 kreditu</label>
+                </div>
+                <div class="form-check my-2">
+                  <input class="form-check-input" type="radio" id="q7_2" name="q7" value="2">
+                  <label class="form-check-label" for="q7_2">120 kreditu</label>
+                </div>
+                <div class="form-check my-2">
+                  <input class="form-check-input" type="radio" id="q7_3" name="q7" value="3">
+                  <label class="form-check-label" for="q7_3">168 kreditu</label>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-success mt-4">Bidali</button>
+              
+          </form>
+          <div id="emaitzadiv" class="mt-4 d-inline-block"></div>
+      </div>
+    
+      
     </div>
     <footer class="bg-dark text-light text-center py-4">
         <div class="container mt-3">
@@ -69,6 +173,36 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script>
+        document.getElementById('galdetegia').addEventListener('submit', function(event) {
+          event.preventDefault();
+    
+          const erantzunak = {
+            q1: '1',
+            q2: '2',
+            q3: '3',
+            q4: '1',
+            q5: '3',
+            q6: '2',
+            q7: '3'
+          };
+    
+          var puntuazioa = 0;
+          var galdKop = 7;
+    
+          for (var i = 1; i <= galdKop; i++) {
+            var galdera = 'q' + i;
+            var erantzuna = document.querySelector(`input[name=${galdera}]:checked`);
+    
+            if (erantzuna && erantzuna.value === erantzunak[galdera]) {
+              puntuazioa++;
+            }
+          }
+    
+          var cont = document.getElementById('emaitzadiv');
+          cont.innerHTML = `<h3>Zure emaitza: ${puntuazioa}/${galdKop}</h3>`;
+        });
+      </script>
 </body>
 
 <script>

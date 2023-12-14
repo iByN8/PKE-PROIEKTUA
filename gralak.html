@@ -68,7 +68,7 @@
                 ikusi</button>
         </div>
 
-        <div class="flex-column justify-content-center align-items-center min-vh-100" style="margin-bottom: 60px;">
+        <div class="d-flex flex-column justify-content-center align-items-center min-vh-100 my-4">
             <button id="ezkutatuButton" onclick="gralakEzkutatu()" class="btn btn-primary btn-lg mx-auto"
                 style="display: none;">Atzera itzuli</button>
         </div>
@@ -152,6 +152,9 @@
             "imagenes/i21.png",
         ];
 
+        var estekak = [
+
+        ]
 
         function argazkiaKargatu() {
             var carouselInner = document.querySelector("#miCarrusel .carousel-inner");
@@ -159,17 +162,19 @@
             for (var i = 0; i < imagenes.length; i++) {
                 var item = document.createElement("div");
                 item.className = "carousel-item";
-
+                var a = document.createElement("a");
+                a.href= imagenes[i];
+                a.target = "_blank";
                 var img = document.createElement("img");
                 img.src = imagenes[i];
                 img.className = "d-block w-100";
                 img.alt = "Slide " + (i + 1);
-
+               
                 if (i === 0) {
                     item.classList.add("active");
                 }
-
-                item.appendChild(img);
+                item.appendChild(a);
+                a.appendChild(img);
                 carouselInner.appendChild(item);
             }
         }
@@ -178,11 +183,8 @@
 
         function hiruZutabe() {
             var ontzia = document.getElementById('ontzia');
-
-            // Limpiamos el contenido existente
             ontzia.innerHTML = "";
 
-            // Creamos un nuevo elemento zutabe
             var zutabe = document.createElement('div');
             zutabe.id = 'zutabe';
 
@@ -252,11 +254,14 @@
                 for (var i = 14; i < 21; i++) {
                     var zutabe = document.createElement('div');
                     zutabe.className = 'zutabe';
-
+                    var a = document.createElement("a");
+                    a.href= imagenes[i];
+                    a.target = "_blank";
                     var imagen = document.createElement('img');
                     imagen.src = imagenes[i];
 
-                    zutabe.appendChild(imagen);
+                    zutabe.appendChild(a);
+                    a.appendChild(imagen);
                     ontzia.appendChild(zutabe);
                 }
             }
@@ -265,11 +270,14 @@
                 for (var i = 7; i < 14; i++) {
                     var zutabe = document.createElement('div');
                     zutabe.className = 'zutabe';
-
+                    var a = document.createElement("a");
+                    a.href= imagenes[i];
+                    a.target = "_blank";
                     var imagen = document.createElement('img');
                     imagen.src = imagenes[i];
 
-                    zutabe.appendChild(imagen);
+                    zutabe.appendChild(a);
+                    a.appendChild(imagen);
                     ontzia.appendChild(zutabe);
                 }
             }
@@ -278,11 +286,14 @@
                 for (var i = 0; i < 7; i++) {
                     var zutabe = document.createElement('div');
                     zutabe.className = 'zutabe';
-
+                    var a = document.createElement("a");
+                    a.href= imagenes[i];
+                    a.target = "_blank";
                     var imagen = document.createElement('img');
                     imagen.src = imagenes[i];
 
-                    zutabe.appendChild(imagen);
+                    zutabe.appendChild(a);
+                    a.appendChild(imagen);
                     ontzia.appendChild(zutabe);
                 }
             }
@@ -291,11 +302,14 @@
                 for (var i = 0; i < 21; i++) {
                     var zutabe = document.createElement('div');
                     zutabe.className = 'zutabe';
-
+                    var a = document.createElement("a");
+                    a.href= imagenes[i];
+                    a.target = "_blank";
                     var imagen = document.createElement('img');
                     imagen.src = imagenes[i];
 
-                    zutabe.appendChild(imagen);
+                    zutabe.appendChild(a);
+                    a.appendChild(imagen);
                     ontzia.appendChild(zutabe);
                 }
             }
